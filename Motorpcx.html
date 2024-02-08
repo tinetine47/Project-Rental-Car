@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my belle</title>
+    <link rel="stylesheet" href="chubby.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-con">
+            <div class="logo">
+                <a href="#">
+                    <img class="logosize"src="./img/RENT cAR HOUSE (1).png" alt="">
+                </a>
+            </div>
+            <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="Home.html/#service">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            </div>
+        </div>
+        <script>
+            const lis = document.querySelectorAll('li');
+        
+            for (const li of lis) {
+              li.addEventListener('click', () => {
+                const id = li.querySelector('a').getAttribute('href');
+                const box = document.querySelector(id);
+                box.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                  inline: 'nearest',
+                });
+        
+                // Add animation
+                box.style.animation = 'scroll 1s ease-in-out infinite';
+        
+                // Remove animation after 1 second
+                setTimeout(() => {
+                  box.style.animation = '';
+                }, 1000);
+              });
+            }
+        </script>
+    </nav>
+    <section class="hero">
+        <div class="name-container">
+            <div class="car-name">
+                <p style="font-size: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;PCX 2017<br><br>&nbsp;700 THB/Day</p>
+            </div>
+        </div>
+        <div class="motorimg-container">
+            <img class="img-detail" src="./img/Honda PCX.png" alt="">
+        </div>
+        <div class="car-container">
+            <div class="nav-detail">
+                <div class="box-detail">
+                    <i class="fa-solid fa-person"></i>
+                </div>
+                <div class="box-detail">
+                    <i class="fa-solid fa-gauge"></i>
+                </div>
+                <div class="box-detail">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+            </div>
+        </div>
+        <div class="car-container">
+            <div class="nav-detail">
+                <div class="box-txt">
+                    <p>2 persons</p>
+                </div>
+                <div class="box-txt">
+                    <p>150 CC</p>
+                </div>
+                <div class="box-txt">
+                    <p>Gear Auto</p>
+                </div>
+            </div>
+        </div>
+        <div class="rent-container">
+            <botton class="rent-botton">RENT</botton>
+        </div>
+    </section>
+</section>
+<div class="footer-top">
+    <div class="container">
+        <div class="footer-top-con">
+            <div class="footer-top-item">
+                <h4>Latest Post</h4>
+                <div class="footer-top-item-con">
+                    <div class="data">
+                        JULY <br>
+                        27
+                    </div>
+                    <div class="info">
+                        <span class="info-title">Lorem ipsum dolor sit amet.</span>
+                        <span class="info-desc">Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </div>
+                <div class="footer-top-item-con">
+                    <div class="data">
+                        JULY <br>
+                        27
+                    </div>
+                    <div class="info">
+                        <span class="info-title">Lorem ipsum dolor sit amet.</span>
+                        <span class="info-desc">Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </div>
+                <div class="footer-top-item-con">
+                    <div class="data">
+                        JULY <br>
+                        27
+                    </div>
+                    <div class="info">
+                        <span class="info-title">Lorem ipsum dolor sit amet.</span>
+                        <span class="info-desc">Lorem ipsum dolor sit amet consectetur.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top-item">
+                <h4>About</h4>
+                <p>CPE Rental Car เป็นบริษัทให้เช่ารถ<br>ที่ให้บริการเช่ารถหลากหลายประเภท<br> รวมถึงรถยนต์, รถบรรทุก, SUVs และรถมินิแวน<br>และให้บริการเช่าทั้งระยะสั้นและระยะยาว</p>
+            </div>
+            <div class="footer-top-item">
+                <h4>Stay connected</h4>
+                <p><i class="fa-brands fa-square-facebook"></i>&nbsp;Facebook&nbsp;: CPERentalCar</p>
+                    <p><i class="fa-brands fa-square-x-twitter"></i>&nbsp;Twitter&nbsp;: @CPERentalCar</p>
+                    <p><i class="fa-brands fa-line"></i>&nbsp;Line&nbsp;: @cperentalCar</p>
+                    <p><i class="fa-brands fa-square-google-plus"></i>&nbsp;Google+&nbsp;: cperentalcar@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://kit.fontawesome.com/9efcaa1843.js" crossorigin="anonymous"></script>
+</body>
+</html>

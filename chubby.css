@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+nav {
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+}
+.logosize{
+    width: 200px;
+    height: 200px;
+}
+.logo a {
+    font-size: 2rem;
+    color: rgb(255, 249, 249);
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li a {
+    font-size: 1vw ;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.hero{
+    background-color: rgb(176, 168, 168);
+}
+.hero-img{
+    width: 100%;
+}
+.blog-con {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.blog-title {
+    margin: 2rem 0;
+}
+
+.blog-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.blog-item:hover{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin: 1rem 0;
+    transform: scale(1.05);
+    transition: 0.3s;
+    margin-bottom: 1rem;
+}
+.blog-item h4 {
+    margin-top: 1rem;
+    margin: 1rem 0;
+}
+
+.blog-item p {
+    margin: 1rem 0;
+}
+
+.blog-item a {
+    display: inline-block;
+    color: aliceblue;
+    background-color: rgb(219, 159, 19);
+    padding: .5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.footer-top {
+    margin-top: 2rem;
+    padding: 3rem;
+    background-color: #585858;
+    color: #ffffff;
+}
+
+.footer-top-con {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.footer-top-item-con {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.footer-top-item-con .data {
+    background-color: #fff;
+    color: black;
+    padding: 0.2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.footer-top-item:nth-child(2) h4 {
+    margin-bottom: 1rem;
+    /* margin: 1rem 0; */
+    column-gap: 2rem;
+}
+
+.footer-top-item:nth-child(3) h4 {
+    margin-bottom: 1rem;
+    /* margin: 1rem 0; */
+    column-gap: 2rem;
+}
+

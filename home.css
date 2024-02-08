@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #e5e5e5;
+    flex-direction: column;
+}
+
+* a {
+    text-decoration: none;
+    color: #5DADE2;
+}
+
+* li {
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: #e5e5e5;
+}
+
+.navbar {
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    display: flex;
+    position: relative;
+}
+
+li a{
+    padding: 15px 30px;
+}
+
+li:hover{
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    top: 100%;
+    border-radius: 4px;
+    width: 200px;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+li a i{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.dropdown-link:hover .dropdown {
+    top: 102%;
+    opacity: 1;
+    visibility: visible;
+}

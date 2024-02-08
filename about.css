@@ -1,0 +1,8 @@
+.txt-main{
+    display: flex;
+}
+.about-img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

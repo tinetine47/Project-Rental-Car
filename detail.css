@@ -1,0 +1,83 @@
+.nav-detail{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-detail{
+    font-size: 70px;
+    margin: 0 auto;
+    display: flex;
+
+}
+.box-txt{
+    font-size: 30px;
+    margin: 0 auto;
+    display: flex;
+
+}
+.name-container{
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-name{
+    background: linear-gradient(100deg, #000, #494949);
+    color: white;
+    margin-top: 50px;
+    width: 700px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carimg-container{
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.motorimg-container{
+    padding: 100px;
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-container{
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.img-detail{
+    margin: 0 auto;
+}
+.rent-container{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rent-botton{
+    font-size: 20px;
+    cursor: pointer;
+    width: 170px;
+    height: 90px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rent-botton:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
