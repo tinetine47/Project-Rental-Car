@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="in.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <img id="logo" src="./img/carr.png" alt="Logo"> 
+    <form action="/submit" method="post">
+        <div class="head">
+            <h2>กรอกข้อมูลการจอง</h2><br><br>
+            <!-- <p>Already have an Account? <a href="#">Sign in</a></p> -->
+            <div class="form-group">
+                <!-- <label for="username">Username :</label> -->
+                <input type="text" id="username" name="username" placeholder="Username">
+                <div class="bio">
+                    <!-- <label for="firstname">firstname :</label> -->
+                    <input type="text" id="firstname" name="firstname" placeholder="firstname">
+                    <!-- <label for="lastname">Lastname :</label> -->
+                    <input type="text" id="lastname" name="lastname" placeholder="Lastname">
+                </div>
+                <!-- <label for="phone">Phone Number :</label> -->
+                <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+            <div class="group-email">
+                <!-- <label>Email:</label> -->
+                <input type="text" id="email" name="email" placeholder="Email">
+            </div>
+<div class="form-address">
+            <!-- <label for="address">Address :</label> -->
+            <input type="text" id="address" name="address" placeholder="Address">
+            </div>
+            <div class="form-city">
+                <!-- <label for="city">City :</label> -->
+                <input type="text" id="city" name="city" placeholder="City">
+    
+               
+        </div>
+</div>
+<button type="button"  id="submitBtn" >
+    Submit
+</button>
+</form>
+
+<script>
+    function submitForm() {
+        const username = document.getElementById('username').value;
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+
+        const formData = { username, firstname, lastname, phone, email, address, city };
+
+        fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log('Server response:', data);
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+        });
+    }
+
+    // เพิ่มการเชื่อมโยงกับปุ่ม Submit
+    document.getElementById('submitBtn').addEventListener('click', submitForm);
+</script>
+    
+  
+    
+</body>
+</html>

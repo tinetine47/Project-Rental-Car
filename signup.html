@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="sigup.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   
+</head>
+<body>
+   
+    <div class="header">   
+        <form action="/register" method="post">
+            <h2>Register</h2>
+            <div class="input-group">
+                <!-- <label for="username">Username</label> -->
+                <input type="text" id="username" name="username" placeholder="Username">
+                <i class='bx bx-user'></i>
+            </div>
+            <div class="input-group">
+                <!-- <label for="email">Email</label> -->
+                <input type="email" id="email" name="email" placeholder="Email">
+                <i class='bx bx-envelope' ></i>
+            </div>
+            <div class="input-group">
+                <!-- <label for="password_1">Password</label> -->
+                <input type="password" id="password_1" name="password_1" placeholder="Password">
+                <i class='bx bx-shield' ></i>
+            </div>
+            <div class="input-group">
+                <!-- <label for="password_2">Confirm Password</label> -->
+                <input type="password" id="password_2" name="password_2" placeholder="Confirm Password">
+                <i class='bx bx-check-shield' ></i>
+            </div>
+            
+            
+                <button class="Btn" type="button" id="registerBtn">Register</button>
+                <div class="register-link">
+                    <p>Already a member <a href="login.php">Sign in</a></p>
+                </div>
+        </form>
+    </div>
+    <script>
+        function submitForm(){
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password_1= document.getElementById('password_1').value;
+            const password_2= document.getElementById('password_2').value;
+
+            const formData = { username, email, password_1,password_2};
+            fetch('http://localhost:3000/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Server response:', data);
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        }
+    
+        document.getElementById('registerBtn').addEventListener('click', submitForm);
+
+
+
+    </script>
+       
+ 
+</body>
+</html>

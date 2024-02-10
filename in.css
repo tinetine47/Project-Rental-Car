@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif
+}
+#logo {
+    max-width: 250px; /* ปรับขนาดของ logo ตามที่คุณต้องการ */
+    height: auto;
+    margin-top: 20px; /* ระยะห่างของ logo จากบนของหน้าเว็บ */
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+
+form {
+    background-color: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px 30px 30px;
+}
+.head h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    color: #15029e;
+}
+
+.head p {
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    border: none;
+    background-color: #f3f3f3;
+    border-radius: 7px;
+    padding: 15px;
+}
+.form-city {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.form-address {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+.group-email {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+input::placeholder {
+    font-style: italic;
+    font-size: 90%;
+    color: #bbb;
+}
+input:focus {
+    background-color: #fff; }
+    /* box-sizing: 0 1px 3px rgba(3, 5, 0, 0.12), 0 1px 2px rgba(3, 5, 0, 0.12);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1); */
+
+
+.bio {
+    margin: 10px 0;
+}
+
+button {
+
+    background-color: #c30303;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background-color: #f6ff00;
+}
+
+.check {
+    display: flex;
+    align-items: baseline;
+    margin-top: 10px;
+}
+
+/* .check p {
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: center;
+} */
+
+check input {
+    margin-right: 10px;
+    margin-top: 10px;
+}
