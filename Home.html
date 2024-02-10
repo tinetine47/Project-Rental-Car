@@ -3,27 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my belle</title>
+    <title>home</title>
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="chubby.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <div class="nav-con">
-            <div class="logo">
-                <a href="Home.html">
-                    <img class="logosize"src="./img/RENT cAR HOUSE (1).png" alt="">
-                </a>
-            </div>
-            <ul class="menu">
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#"> <img class="logosize"src="./img/RENT cAR HOUSE (1).png" alt=""></a>
+    </div>
+    <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
                 <li><a href="Home.html">Home</a></li>
                 <li><a href="Aboutus.html">About Us</a></li>
                 <li><a href="#service">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            </div>
-        </div>
+                <li><a href="login/login.html">
+                    <i class="fa-solid fa-user tooltip">
+                        <span class="tooltiptext" style="font-size: 0.5vw;">Profile</span>
+                    </a>
+                    </i>
+                </li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  
+        <script src="https://kit.fontawesome.com/9efcaa1843.js" crossorigin="anonymous"></script>
+        <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = ()=>{
+            navbar.classList.add("show");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabled");
+        }
+        cancelBtn.onclick = ()=>{
+            body.classList.remove("disabled");
+            navbar.classList.remove("show");
+            menuBtn.classList.remove("hide");
+        }
+        window.onscroll = ()=>{
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+        </script>
 
         <script>
             const lis = document.querySelectorAll('li');

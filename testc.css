@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    padding: 0 20px;
+    background: rgb(0, 0, 0);
+    height: auto;
+}
+
+nav {
+    padding: 0;
+    background-color: #000000;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.nav-con {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.logosize{
+    width: 100px;
+    height: 100px;
+}
+.logo a {
+    font-size: 2rem;
+    color: rgb(255, 249, 249);
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu li a {
+    font-size: 1vw ;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.main{
+    width: 100%;
+    background: #858585;
+    height: 100%;
+    
+}
+.mainmenu{
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-top: 5vw;
+    width: 80%;
+    height: 100%;
+    background: #858585 ;
+    display: flex;
+}
+
+.menu-setting{
+    width: 11%;
+    padding: 10px;
+    
+}
+.menu-setting p{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #959595;
+    margin-bottom: 10px; 
+    cursor: pointer;
+}
+.logout {
+    margin: 0;
+    margin-top: 588px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #959595;
+}
+.showset{
+   margin: 10px 90px 90px 90px; 
+   text-align: center;
+   background: #959595;
+   border-radius: 5px;
+   width: 80%;
+   height: 40vw;
+   
+}

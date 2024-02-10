@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="welcomeMessage">
+        <!-- ข้อความ "เข้าสู่ระบบสำเร็จยินดีต้อนรับ" จะถูกเพิ่มที่นี่ -->
+    </div>
+    <form action="/login" method="post">
+    <div class="wrapper">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <i class='bx bxs-lock-alt' ></i>
+            </div>
+
+            <button type="button" class="btn" id="login">Login</button>
+
+            <div class="register-link">
+                <p>Not yet a member?</p>
+            </div>
+        </div>
+    </form>
+    <script>
+        function submitForm(){
+            const username = document.getElementById('username').value;
+            const password= document.getElementById('password').value;
+
+            const formData = { username, password};
+            fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Server response:', data);
+                // หลังจากเข้าสู่ระบบสำเร็จ แก้ไข DOM เพื่อแสดงข้อความ "เข้าสู่ระบบสำเร็จยินดีต้อนรับ"
+                document.getElementById('welcomeMessage').innerHTML = data;
+
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        }
+    
+        document.getElementById('login').addEventListener('click', submitForm);
+
+    
+    </script>
+
+</body>
+</html>
