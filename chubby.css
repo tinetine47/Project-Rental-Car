@@ -89,13 +89,6 @@ nav {
         grid-template-columns: 1fr ; /* เปลี่ยนจำนวนคอลัมน์เป็น 1 เมื่อหน้าจอย่อลง */
     }
 }
-@media  (max-width: 768px) {
-    .blog-item img {
-        width: 300vw; 
-    }
-}
-
-
 .blog-title {
     margin: 2rem 0;
     padding: 1px;
@@ -132,7 +125,11 @@ nav {
     transition: 0.3s;
     margin: 1rem 0;
 }
-
+@media  (max-width: 768px) {
+    .blog-item img {
+        width: 300px; 
+    }
+}
 .blog-item a {
     width: auto;
     display: inline-block;
