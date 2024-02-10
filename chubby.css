@@ -83,9 +83,15 @@ nav {
     text-align: center;  
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 700px) {
     .blog-con {
         grid-template-columns: 1fr ; /* เปลี่ยนจำนวนคอลัมน์เป็น 1 เมื่อหน้าจอย่อลง */
+    }
+}
+@media  (max-width: 768px) {
+    .blog-item img {
+        width: 300vw; 
     }
 }
 
@@ -128,6 +134,7 @@ nav {
 }
 
 .blog-item a {
+    width: auto;
     display: inline-block;
     color: aliceblue;
     background-color: rgb(96, 114, 218);
