@@ -8,9 +8,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div id="welcomeMessage">
-        <!-- ข้อความ "เข้าสู่ระบบสำเร็จยินดีต้อนรับ" จะถูกเพิ่มที่นี่ -->
-    </div>
     <form action="/login" method="post">
     <div class="wrapper">
             <h1>Login</h1>
@@ -46,9 +43,10 @@
             .then(response => response.text())
             .then(data => {
                 console.log('Server response:', data);
-                // หลังจากเข้าสู่ระบบสำเร็จ แก้ไข DOM เพื่อแสดงข้อความ "เข้าสู่ระบบสำเร็จยินดีต้อนรับ"
-                document.getElementById('welcomeMessage').innerHTML = data;
+                window.location.href = '/infomation.html';
 
+            
+            
             })
             .catch(error => {
                 console.error('Error submitting form:', error);

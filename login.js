@@ -27,7 +27,7 @@ app.get('/',(req, res)=> {
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    console.log(Received data: ${JSON.stringify(req.body)});
+    console.log(`Received data: ${JSON.stringify(req.body)}`);
 
     if (username && password) {
         const selectQuery = 'SELECT * FROM signup WHERE username = ? AND password = ?';
@@ -49,7 +49,7 @@ app.post('/login', (req, res) => {
                             return res.status(500).send('เกิดข้อผิดพลาดในการบันทึกข้อมูล');
                         } else {
                             console.log('บันทึกข้อมูลลงในตาราง mysql สำเร็จ:', result);
-                            res.send(<p>เข้าสู่ระบบสำเร็จ ยินดีต้อนรับ !</p>);
+                            
                         }
                     });
                 } else {
@@ -63,5 +63,5 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(port, ()=>{
-    console.log( Server is running at http://localhost:${port});
+    console.log(` Server is running at http://localhost:${port}`);
 });
